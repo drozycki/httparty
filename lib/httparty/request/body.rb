@@ -34,7 +34,7 @@ module HTTParty
           memo += %(Content-Disposition: form-data; name="#{key}")
           memo += %(; filename="#{File.basename(value)}") if file?(value)
           memo += "\r\n"
-          memo += "Content-Type: application/octet-stream\r\n" if file?(value)
+          memo += "Content-Type: image/jpeg\r\n" if file?(value)
           memo += "\r\n"
           memo += file?(value) ? value.read : value.to_s
           memo += "\r\n"
